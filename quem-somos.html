@@ -14,14 +14,26 @@
     <header class="navbar">
         <div class="container nav-container">
             <div class="brand-wrapper">
-                <a href="index.html" class="brand-logo logo-3d">
-                    <span class="logo-code">&lt;Code</span><span class="logo-hub">Hub</span><span class="logo-slash">/&gt;</span>
-                </a>
+                <div class="logo-3d-wrapper">
+                    <a href="index.html" class="logo-3d">
+                        <span class="logo-code">&lt;Code</span><span class="logo-hub">Hub</span><span class="logo-slash">/&gt;</span>
+                    </a>
+                </div>
                 <div class="iff-brand-container">
-                    <img src="https://raw.githubusercontent.com/iff-quissama/marcas-iff/main/logo-iff.svg" alt="Logo Instituto Federal Fluminense" class="iff-logo-img">
-                    <div class="iff-badge-discrete">
-                        <span class="iff-dot"></span> Quissamã
-                    </div>
+                    <svg class="iff-svg-logo" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="10" width="12" height="12" rx="2" fill="#d32f2f"/>
+                        <rect x="20" y="10" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="5" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="20" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="5" y="40" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="20" y="40" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="35" y="10" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="35" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <text x="58" y="28" fill="#0d1b2a" font-family="Inter" font-weight="800" font-size="14">INSTITUTO</text>
+                        <text x="58" y="42" fill="#00838f" font-family="Inter" font-weight="700" font-size="12">FEDERAL</text>
+                        <text x="58" y="53" fill="#546e7a" font-family="Inter" font-weight="500" font-size="9">Fluminense</text>
+                    </svg>
+                    <div class="iff-badge-discrete"><span class="iff-dot"></span> Quissamã</div>
                 </div>
             </div>
 
@@ -31,16 +43,18 @@
                 <a href="projetos.html">Projetos</a>
                 <a href="operacoes.html">Operações Conjuntas</a>
                 <a href="servicos.html">Serviços</a>
-                <a href="contato.html" class="btn-nav">Contato</a>
+                <a href="contato.html">Contato</a>
+                <a href="login.html" class="btn-nav-login">Área Restrita</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero" style="padding: 60px 0 40px 0;">
+    <!-- HERO COM IMAGEM DA EQUIPE NO FUNDO -->
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80');">
         <div class="container hero-content">
-            <span class="badge">Nossa Identidade &amp; Propósito</span>
+            <span class="badge">Nossa Identidade &amp; História</span>
             <h1>Quem Somos</h1>
-            <p>Conheça a história, a missão e os pilares da miniempresa de tecnologia do IFFluminense Campus Quissamã.</p>
+            <p>Conheça a missão e a essência da miniempresa de tecnologia do IFFluminense Campus Quissamã.</p>
         </div>
     </section>
 
@@ -49,35 +63,11 @@
             <div class="grid grid-2" style="align-items: center;">
                 <div class="card-about">
                     <h3>Sobre a Code Hub</h3>
-                    <p>A <strong>Code Hub</strong> é uma miniempresa de tecnologia concebida no IFFluminense Campus Quissamã no âmbito da disciplina de Prática Profissional Empreendedora (PPE).</p>
-                    <p>Atuamos como um laboratório vivo de inovação onde estudantes vivenciam na prática o desenvolvimento de softwares, gestão de projetos ágeis, design UX/UI e consultoria de TI para a comunidade escolar e parceiros externos.</p>
+                    <p class="mt-2">A <strong>Code Hub</strong> é uma miniempresa de tecnologia concebida no IFFluminense Campus Quissamã no âmbito da disciplina de Prática Profissional Empreendedora (PPE).</p>
+                    <p class="mt-2">Atuamos como um laboratório vivo de inovação onde estudantes vivenciam na prática o desenvolvimento de softwares, gestão de projetos ágeis e design de experiência do usuário.</p>
                 </div>
-                <div class="about-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Equipe Code Hub trabalhando">
-                </div>
-            </div>
-
-            <div class="mt-5">
-                <div class="section-title">
-                    <h2>Nossos Pilares Fundamentais</h2>
-                    <p>Valores que guiam cada linha de código e solução desenvolvida</p>
-                </div>
-                <div class="grid grid-3">
-                    <div class="card-pilar">
-                        <div class="pilar-icon">🌱</div>
-                        <h4>Aprendizagem Prática</h4>
-                        <p>Formação profissional sólida enfrentando desafios reais do mercado e do ecossistema educacional.</p>
-                    </div>
-                    <div class="card-pilar">
-                        <div class="pilar-icon">⚡</div>
-                        <h4>Agilidade &amp; Qualidade</h4>
-                        <p>Adoção das melhores práticas do mercado, como métricas Scrum, Kanban e testes integrados.</p>
-                    </div>
-                    <div class="card-pilar">
-                        <div class="pilar-icon">🤝</div>
-                        <h4>Impacto Social &amp; Regional</h4>
-                        <p>Desenvolvimento de soluções gratuitas ou de baixo custo voltadas para a melhoria da comunidade de Quissamã e região.</p>
-                    </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Equipe Code Hub" style="border-radius: var(--radius-md); box-shadow: var(--shadow-hover);">
                 </div>
             </div>
         </div>
@@ -85,24 +75,8 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="grid grid-2">
-                <div>
-                    <a href="index.html" class="brand-logo logo-3d footer-logo">
-                        <span class="logo-code">&lt;Code</span><span class="logo-hub">Hub</span><span class="logo-slash">/&gt;</span>
-                    </a>
-                    <p class="footer-desc">Miniempresa de Tecnologia do IFFluminense Campus Quissamã.</p>
-                    <div class="footer-iff-brand">
-                        <img src="https://raw.githubusercontent.com/iff-quissama/marcas-iff/main/logo-iff.svg" alt="IFFluminense Logo" class="footer-iff-img">
-                    </div>
-                </div>
-                <div class="footer-contact">
-                    <h4>Entre em Contato</h4>
-                    <p>Deseja firmar uma parceria ou conhecer nossa equipe?</p>
-                    <a href="contato.html" class="btn btn-primary mt-2">Página de Contato</a>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Code Hub - IFFluminense Campus Quissamã. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Code Hub - IFFluminense Campus Quissamã. Avenida Amílcar Pereira da Silva 727, bairro Piteiras Quissamã RJ.</p>
             </div>
         </div>
     </footer>
