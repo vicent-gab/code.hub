@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Code Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--dark-color);
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 14px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+        .contact-box {
+            background-color: var(--bg-card);
+            padding: 32px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-soft);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="brand-wrapper">
+                <a href="index.html" class="brand-logo logo-3d">
+                    <span class="logo-code">&lt;Code</span><span class="logo-hub">Hub</span><span class="logo-slash">/&gt;</span>
+                </a>
+                <div class="iff-brand-container">
+                    <img src="logo-iff.png" alt="Logo Instituto Federal Fluminense" class="iff-logo-img">
+                    <div class="iff-badge-discrete">
+                        <span class="iff-dot"></span> Quissamã
+                    </div>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="quem-somos.html">Quem Somos</a>
+                <a href="o-projeto.html">O Projeto</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="operacoes.html">Operações Conjuntas</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="contato.html" class="active btn-nav">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="padding: 60px 0 40px 0;">
+        <div class="container hero-content">
+            <span class="badge">Fale Conosco</span>
+            <h1>Entre em Contato</h1>
+            <p>Envie sua sugestão, proposta de parceria ou solicitação de projeto para a equipe Code Hub.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2">
+                <!-- FORMULÁRIO -->
+                <div class="contact-box">
+                    <h3>Envie uma Mensagem</h3>
+                    <form style="margin-top: 20px;" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" required placeholder="Seu nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail Institucional ou Comercial</label>
+                            <input type="email" id="email" required placeholder="seuemail@exemplo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto / Tipo de Demanda</label>
+                            <select id="assunto" required>
+                                <option value="">Selecione...</option>
+                                <option value="sistema">Proposta de Novo Sistema</option>
+                                <option value="parceria">Parceria / Operação Conjunta</option>
+                                <option value="duvida">Dúvida / Informação</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Descrição do Problema ou Projeto</label>
+                            <textarea id="mensagem" required placeholder="Descreva detalhes sobre sua necessidade..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitação</button>
+                    </form>
+                </div>
+
+                <!-- INFORMAÇÕES DE LOCALIZAÇÃO E CONTATO -->
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <h3>Localização &amp; Atendimento</h3>
+                    <p class="mt-2"><strong>Instituto Federal Fluminense (IFF) - Campus Quissamã</strong></p>
+                    <p>Av. Fued Moisés, nº 295 - Piteiras, Quissamã - RJ</p>
+
+                    <div class="mt-4">
+                        <p><strong>Laboratório do Projeto:</strong> Sala de Prática Profissional Empreendedora (PPE)</p>
+                        <p><strong>E-mail:</strong> codehub.quissama@iff.edu.br</p>
+                        <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 08h às 17h</p>
+                    </div>
+
+                    <div class="mt-4">
+                        <img src="logo-iff.png" alt="IFFluminense Logo" style="height: 60px; width: auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="margin-top: 0; padding-top: 0; border-top: none;">
+                <p>&copy; 2026 Code Hub - IFFluminense Campus Quissamã. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
