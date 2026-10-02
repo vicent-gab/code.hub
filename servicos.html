@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços | Code Hub</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -14,29 +11,40 @@
     <header class="navbar">
         <div class="container nav-container">
             <div class="brand-wrapper">
-                <a href="index.html" class="brand-logo logo-3d">
+                <a href="index.html" class="logo-3d">
                     <span class="logo-code">&lt;Code</span><span class="logo-hub">Hub</span><span class="logo-slash">/&gt;</span>
                 </a>
                 <div class="iff-brand-container">
-                    <img src="https://raw.githubusercontent.com/iff-quissama/marcas-iff/main/logo-iff.svg" alt="Logo Instituto Federal Fluminense" class="iff-logo-img">
-                    <div class="iff-badge-discrete">
-                        <span class="iff-dot"></span> Quissamã
-                    </div>
+                    <svg class="iff-svg-logo" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="10" width="12" height="12" rx="2" fill="#d32f2f"/>
+                        <rect x="20" y="10" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="5" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="20" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="5" y="40" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="20" y="40" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="35" y="10" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="35" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <text x="58" y="28" fill="#0d1b2a" font-family="Inter" font-weight="800" font-size="14">INSTITUTO</text>
+                        <text x="58" y="42" fill="#00838f" font-family="Inter" font-weight="700" font-size="12">FEDERAL</text>
+                        <text x="58" y="53" fill="#546e7a" font-family="Inter" font-weight="500" font-size="9">Fluminense</text>
+                    </svg>
+                    <div class="iff-badge-discrete"><span class="iff-dot"></span> Quissamã</div>
                 </div>
             </div>
-
             <nav class="nav-menu">
                 <a href="quem-somos.html">Quem Somos</a>
                 <a href="o-projeto.html">O Projeto</a>
                 <a href="projetos.html">Projetos</a>
                 <a href="operacoes.html">Operações Conjuntas</a>
                 <a href="servicos.html" class="active">Serviços</a>
-                <a href="contato.html" class="btn-nav">Contato</a>
+                <a href="contato.html">Contato</a>
+                <a href="login.html" class="btn-nav-login">Área Restrita</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero" style="padding: 60px 0 40px 0;">
+    <!-- HERO COM IMAGEM DE SERVIÇOS/CÓDIGO -->
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80');">
         <div class="container hero-content">
             <span class="badge">Catálogo de Atuação</span>
             <h1>Nossos Serviços</h1>
@@ -48,23 +56,20 @@
         <div class="container">
             <div class="grid grid-4">
                 <div class="card-service">
-                    <h4>💻 Desenvolvimento Web</h4>
-                    <p>Criação de landing pages, portais institucionais e sistemas web responsivos sob medida.</p>
+                    <h4>💻 Sistemas Web</h4>
+                    <p>Desenvolvimento de plataformas institucionais e painéis administrativos responsivos.</p>
                 </div>
-
-                <div class="card-service">
-                    <h4>⚙️ Automação de Processos</h4>
-                    <p>Desenvolvimento de scripts e ferramentas para automatizar rotinas administrativas repetitivas.</p>
-                </div>
-
                 <div class="card-service">
                     <h4>📱 Prototipagem UI/UX</h4>
-                    <p>Desenho de interfaces amigáveis, wireframes e protótipos navegáveis no Figma.</p>
+                    <p>Design de interfaces acessíveis no Figma focando na experiência do usuário.</p>
                 </div>
-
+                <div class="card-service">
+                    <h4>⚙️ Automação</h4>
+                    <p>Criação de scripts para otimização de rotinas e tratamento de dados.</p>
+                </div>
                 <div class="card-service">
                     <h4>🔍 Consultoria em TI</h4>
-                    <p>Análise de requisitos, diagnóstico de usabilidade e recomendação de arquitetura de software.</p>
+                    <p>Análise de requisitos e diagnóstico técnico de softwares legados.</p>
                 </div>
             </div>
         </div>
@@ -72,24 +77,8 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="grid grid-2">
-                <div>
-                    <a href="index.html" class="brand-logo logo-3d footer-logo">
-                        <span class="logo-code">&lt;Code</span><span class="logo-hub">Hub</span><span class="logo-slash">/&gt;</span>
-                    </a>
-                    <p class="footer-desc">Miniempresa de Tecnologia do IFFluminense Campus Quissamã.</p>
-                    <div class="footer-iff-brand">
-                        <img src="https://raw.githubusercontent.com/iff-quissama/marcas-iff/main/logo-iff.svg" alt="IFFluminense Logo" class="footer-iff-img">
-                    </div>
-                </div>
-                <div class="footer-contact">
-                    <h4>Solicite um Orçamento ou Parceria</h4>
-                    <p>Fale conosco para avaliar a viabilidade da sua demanda.</p>
-                    <a href="contato.html" class="btn btn-primary mt-2">Página de Contato</a>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Code Hub - IFFluminense Campus Quissamã. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Code Hub - IFFluminense Campus Quissamã.</p>
             </div>
         </div>
     </footer>
