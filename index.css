@@ -98,13 +98,26 @@ img {
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
-    padding: 16px 0;
+    padding: 12px 0;
 }
 
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.iff-logo {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
 }
 
 .brand-logo {
@@ -482,6 +495,16 @@ img {
     padding: 64px 0 32px 0;
 }
 
+.footer-brand {
+    margin-bottom: 12px;
+}
+
+.footer-iff-logo {
+    background-color: #ffffff;
+    padding: 2px;
+    border-radius: 4px;
+}
+
 .footer-logo .logo-hub {
     color: #ffffff;
 }
@@ -519,7 +542,7 @@ img {
 
 @media (max-width: 768px) {
     .grid-2 { grid-template-columns: repeat(1, 1fr); }
-    .nav-menu { display: none; } /* Pode ser adaptado para menu hambúrguer */
+    .nav-menu { display: none; }
     .hero h1 { font-size: 28px; }
     .hero p { font-size: 16px; }
     .section { padding: 48px 0; }
