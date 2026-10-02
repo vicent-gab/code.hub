@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Hub | Soluções Digitais & Inovação Tecnológica</title>
+    <title>Code Hub | Inovação & Tecnologia no IFF Quissamã</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -11,17 +11,31 @@
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
+    <!-- CABEÇALHO COM LOGO VETORIAL IFF E LOGO 3D -->
     <header class="navbar">
         <div class="container nav-container">
             <div class="brand-wrapper">
-                <a href="index.html" class="brand-logo logo-3d">
-                    <span class="logo-code">&lt;Code</span><span class="logo-hub">Hub</span><span class="logo-slash">/&gt;</span>
-                </a>
-                
-                <div class="iff-brand-container">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Equipe Code Hub trabalhando">
+                <div class="logo-3d-wrapper">
+                    <a href="index.html" class="logo-3d">
+                        <span class="logo-code">&lt;Code</span><span class="logo-hub">Hub</span><span class="logo-slash">/&gt;</span>
+                    </a>
                 </div>
+                
+                <!-- VETOR INLINE DO INSTITUTO FEDERAL - NÃO QUEBRA NUNCA -->
+                <div class="iff-brand-container">
+                    <svg class="iff-svg-logo" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="10" width="12" height="12" rx="2" fill="#d32f2f"/>
+                        <rect x="20" y="10" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="5" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="20" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="5" y="40" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="20" y="40" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="35" y="10" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="35" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <text x="58" y="28" fill="#0d1b2a" font-family="Inter" font-weight="800" font-size="14">INSTITUTO</text>
+                        <text x="58" y="42" fill="#00838f" font-family="Inter" font-weight="700" font-size="12">FEDERAL</text>
+                        <text x="58" y="53" fill="#546e7a" font-family="Inter" font-weight="500" font-size="9">Fluminense</text>
+                    </svg>
                     <div class="iff-badge-discrete">
                         <span class="iff-dot"></span> Quissamã
                     </div>
@@ -34,50 +48,53 @@
                 <a href="projetos.html">Projetos</a>
                 <a href="operacoes.html">Operações Conjuntas</a>
                 <a href="servicos.html">Serviços</a>
-                <a href="contato.html" class="btn-nav">Contato</a>
+                <a href="contato.html">Contato</a>
+                <a href="login.html" class="btn-nav-login">Área Restrita / Login</a>
             </nav>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
+    <!-- HERO SECTION COM IMAGEM DE FUNDO REVERSÍVEL E OVERLAY CIANO/DARK -->
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=80');">
         <div class="container hero-content">
             <span class="badge">Miniempresa de Tecnologia &bull; IFF Campus Quissamã</span>
-            <h1>Inovação Tecnológica, Formação Prática e Soluções Digitais Reais</h1>
-            <p>Conectamos a teoria acadêmica às necessidades reais da comunidade do IFFluminense e de empresas parceiras, desenvolvendo produtos digitais com excelência, agilidade e impacto social.</p>
+            <h1>Inovação Tecnológica, Formação Prática &amp; Soluções Digitais</h1>
+            <p>Conectamos o aprendizado acadêmico às necessidades do ecossistema educacional e regional de Quissamã através de software de excelência.</p>
             <div class="hero-buttons">
                 <a href="projetos.html" class="btn btn-primary">Conheça Nossos Projetos</a>
-                <a href="o-projeto.html" class="btn btn-outline">Saiba Mais Sobre o Projeto</a>
+                <a href="o-projeto.html" class="btn btn-outline">Estrutura do Projeto</a>
             </div>
         </div>
     </section>
 
-    <!-- RESUMO DE RECURSOS E DESTAQUES -->
+    <!-- CONTEÚDO PRINCIPAL / PILARES -->
     <section class="section">
         <div class="container">
             <div class="section-title">
                 <h2>Soluções &amp; Inovação no Campus</h2>
-                <p>Nossos principais eixos de atuação como miniempresa de tecnologia</p>
+                <p>Nossos eixos de atuação focados em metodologias modernas e impacto social</p>
             </div>
 
             <div class="grid grid-3">
                 <div class="card-pilar">
+                    <div class="pilar-icon">💻</div>
+                    <h3>Desenvolvimento Ágil</h3>
+                    <p class="mt-2">Aplicações focadas no usuário com sprints quinzenais, testes contínuos e entrega rápida de MVP.</p>
+                    <a href="o-projeto.html" class="btn btn-outline mt-4" style="padding: 8px 16px; font-size: 13px;">Ver Ciclo</a>
+                </div>
+
+                <div class="card-pilar">
                     <div class="pilar-icon">🌱</div>
-                    <h4>Aprendizagem Baseada em Projetos</h4>
-                    <p>Desenvolvimento prático por meio da resolução de problemas reais de negócios e setores institucionais.</p>
-                    <a href="quem-somos.html" class="btn-outline btn mt-2" style="font-size:13px; padding: 6px 12px;">Saiba mais</a>
+                    <h3>Aprendizagem Prática</h3>
+                    <p class="mt-2">Formação de estudantes no contexto real da disciplina de Prática Profissional Empreendedora (PPE).</p>
+                    <a href="quem-somos.html" class="btn btn-outline mt-4" style="padding: 8px 16px; font-size: 13px;">Sobre Nós</a>
                 </div>
+
                 <div class="card-pilar">
-                    <div class="pilar-icon">⚡</div>
-                    <h4>Metodologia Ágil</h4>
-                    <p>Entregas quinzenais iterativas focadas na construção do Valor Mínimo Viável (MVP) do cliente.</p>
-                    <a href="o-projeto.html" class="btn-outline btn mt-2" style="font-size:13px; padding: 6px 12px;">Ver fluxo</a>
-                </div>
-                <div class="card-pilar">
-                    <div class="pilar-icon">🎯</div>
-                    <h4>Serviços &amp; Projetos B2B</h4>
-                    <p>Sistemas Web, prototipagem UX/UI, automações de processos e consultoria técnica.</p>
-                    <a href="servicos.html" class="btn-outline btn mt-2" style="font-size:13px; padding: 6px 12px;">Nossos Serviços</a>
+                    <div class="pilar-icon">🤝</div>
+                    <h3>Impacto Institucional</h3>
+                    <p class="mt-2">Sistemas desenvolvidos sob medida para otimizar processos do campus IFF Quissamã e parceiros.</p>
+                    <a href="servicos.html" class="btn btn-outline mt-4" style="padding: 8px 16px; font-size: 13px;">Serviços</a>
                 </div>
             </div>
         </div>
@@ -88,18 +105,16 @@
         <div class="container">
             <div class="grid grid-2">
                 <div>
-                    <a href="index.html" class="brand-logo logo-3d footer-logo">
+                    <a href="index.html" class="logo-3d footer-logo">
                         <span class="logo-code">&lt;Code</span><span class="logo-hub">Hub</span><span class="logo-slash">/&gt;</span>
                     </a>
-                    <p class="footer-desc">Miniempresa de Tecnologia do IFFluminense Campus Quissamã. Projeto concebido no âmbito da disciplina de PPE (Ano Letivo 2026/2027).</p>
-                    <div class="footer-iff-brand">
-                        <img src="https://raw.githubusercontent.com/iff-quissama/marcas-iff/main/logo-iff.svg" alt="IFFluminense Logo" class="footer-iff-img">
-                    </div>
+                    <p class="footer-desc">Miniempresa de Tecnologia do IFFluminense Campus Quissamã. Projeto idealizado na disciplina de PPE.</p>
                 </div>
                 <div class="footer-contact">
-                    <h4>Entre em Contato / Solicite uma Demanda</h4>
-                    <p>Tem uma ideia ou problema para resolver no campus ou na sua empresa?</p>
-                    <a href="contato.html" class="btn btn-primary mt-2">Página de Contato</a>
+                    <h4>Localização &amp; Endereço</h4>
+                    <p><strong>Instituto Federal Fluminense - Campus Quissamã</strong></p>
+                    <p>Avenida Amílcar Pereira da Silva, nº 727 - Bairro Piteiras, Quissamã - RJ</p>
+                    <p class="mt-2">E-mail: codehub.quissama@iff.edu.br</p>
                 </div>
             </div>
             <div class="footer-bottom">
