@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CODE HUB - HOSTER STYLE SHEET (codehub.css)
+   CODE HUB - HOSTER STYLE SHEET (index.css)
    Cores Globais: Inspiradas na identidade do IFF e no ecossistema tech clean
    ========================================================================== */
 
@@ -7,8 +7,8 @@
     --primary-color: #00875a;      /* Verde institucional IFF clean */
     --primary-dark: #006644;       /* Verde escuro para hover */
     --secondary-color: #0052cc;    /* Azul tech moderno */
-    --dark-color: #172b4d;         /* Texto e títulos escuros */
-    --body-color: #42526e;         /* Texto corrido */
+    --dark-color: #172b4d;          /* Texto e títulos escuros */
+    --body-color: #42526e;          /* Texto corrido */
     --bg-light: #f4f5f7;           /* Fundo levemente cinza clean */
     --bg-card: #ffffff;            /* Fundo branco limpo */
     --border-color: #e2e8f0;       /* Linhas e bordas suaves */
@@ -98,7 +98,7 @@ img {
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
-    padding: 12px 0;
+    padding: 14px 0;
 }
 
 .nav-container {
@@ -110,24 +110,72 @@ img {
 .brand-wrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
 }
 
-.iff-logo {
-    height: 38px;
-    width: auto;
-    object-fit: contain;
-    border-radius: 4px;
-}
-
-.brand-logo {
-    font-size: 24px;
-    font-weight: 800;
+/* ==========================================================================
+   LOGO 3D - ESTILO INSPIRADO NA IMAGEM
+   ========================================================================== */
+.logo-3d {
+    font-size: 26px;
+    font-weight: 900;
     letter-spacing: -0.5px;
+    display: inline-flex;
+    align-items: center;
+    text-transform: none;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0px 4px 6px rgba(224, 86, 36, 0.25));
 }
 
-.logo-code { color: var(--primary-color); }
-.logo-hub { color: var(--dark-color); }
+.logo-3d:hover {
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Laranja vibrant 3D com sombras projetadas */
+.logo-3d .logo-code,
+.logo-3d .logo-slash {
+    background: linear-gradient(135deg, #FF6B35 0%, #E04E1B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+        1px 1px 0px #C03808,
+        2px 2px 0px #A02B03,
+        3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.logo-3d .logo-hub {
+    background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+        1px 1px 0px #0D1117,
+        2px 2px 0px #000000,
+        3px 3px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* DISCRETA LOGO / INSÍGNIA IFF */
+.iff-badge-discrete {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #00875a;
+    background: rgba(0, 135, 90, 0.08);
+    border: 1px solid rgba(0, 135, 90, 0.2);
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+.iff-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #de350b; /* Toque vermelho sutil do IFF */
+    border-radius: 50%;
+    display: inline-block;
+}
 
 .nav-menu {
     display: flex;
@@ -495,18 +543,10 @@ img {
     padding: 64px 0 32px 0;
 }
 
-.footer-brand {
-    margin-bottom: 12px;
-}
-
-.footer-iff-logo {
-    background-color: #ffffff;
-    padding: 2px;
-    border-radius: 4px;
-}
-
-.footer-logo .logo-hub {
-    color: #ffffff;
+.footer-logo.logo-3d .logo-hub {
+    background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .footer-desc {
@@ -546,4 +586,5 @@ img {
     .hero h1 { font-size: 28px; }
     .hero p { font-size: 16px; }
     .section { padding: 48px 0; }
+    .brand-wrapper { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
