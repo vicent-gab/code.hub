@@ -4,124 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato | Code Hub</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <style>
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--dark-color);
-        }
-        .form-group input, .form-group textarea, .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            font-family: inherit;
-            font-size: 14px;
-            background-color: #FFFFFF;
-        }
-        .form-group textarea {
-            resize: vertical;
-            height: 120px;
-        }
-        .contact-box {
-            background-color: var(--bg-card);
-            padding: 32px;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-soft);
-        }
-    </style>
 </head>
 <body>
 
     <header class="navbar">
         <div class="container nav-container">
             <div class="brand-wrapper">
-                <a href="index.html" class="brand-logo logo-3d">
+                <a href="index.html" class="logo-3d">
                     <span class="logo-code">&lt;Code</span><span class="logo-hub">Hub</span><span class="logo-slash">/&gt;</span>
                 </a>
                 <div class="iff-brand-container">
-                    <img src="https://raw.githubusercontent.com/iff-quissama/marcas-iff/main/logo-iff.svg" alt="Logo Instituto Federal Fluminense" class="iff-logo-img">
-                    <div class="iff-badge-discrete">
-                        <span class="iff-dot"></span> Quissamã
-                    </div>
+                    <svg class="iff-svg-logo" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="10" width="12" height="12" rx="2" fill="#d32f2f"/>
+                        <rect x="20" y="10" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="5" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="20" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="5" y="40" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="20" y="40" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="35" y="10" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="35" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <text x="58" y="28" fill="#0d1b2a" font-family="Inter" font-weight="800" font-size="14">INSTITUTO</text>
+                        <text x="58" y="42" fill="#00838f" font-family="Inter" font-weight="700" font-size="12">FEDERAL</text>
+                        <text x="58" y="53" fill="#546e7a" font-family="Inter" font-weight="500" font-size="9">Fluminense</text>
+                    </svg>
+                    <div class="iff-badge-discrete"><span class="iff-dot"></span> Quissamã</div>
                 </div>
             </div>
-
             <nav class="nav-menu">
                 <a href="quem-somos.html">Quem Somos</a>
                 <a href="o-projeto.html">O Projeto</a>
                 <a href="projetos.html">Projetos</a>
                 <a href="operacoes.html">Operações Conjuntas</a>
                 <a href="servicos.html">Serviços</a>
-                <a href="contato.html" class="active btn-nav">Contato</a>
+                <a href="contato.html" class="active">Contato</a>
+                <a href="login.html" class="btn-nav-login">Área Restrita</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero" style="padding: 60px 0 40px 0;">
+    <!-- HERO COM IMAGEM DE CONTATO -->
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1600&q=80');">
         <div class="container hero-content">
-            <span class="badge">Fale Conosco</span>
-            <h1>Entre em Contato</h1>
-            <p>Envie sua sugestão, proposta de parceria ou solicitação de projeto para a equipe Code Hub.</p>
+            <span class="badge">Atendimento &amp; Localização</span>
+            <h1>Fale Conosco</h1>
+            <p>Envie sua proposta de projeto, dúvida ou agende uma reunião com a liderança do projeto.</p>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
             <div class="grid grid-2">
-                <!-- FORMULÁRIO -->
-                <div class="contact-box">
-                    <h3>Envie uma Mensagem</h3>
-                    <form style="margin-top: 20px;" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');">
+                <div class="card-pilar">
+                    <h3>Envie sua Mensagem</h3>
+                    <form class="mt-4" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
                         <div class="form-group">
-                            <label for="nome">Nome Completo</label>
-                            <input type="text" id="nome" required placeholder="Seu nome completo">
+                            <label>Nome Completo</label>
+                            <input type="text" required placeholder="Digite seu nome">
                         </div>
                         <div class="form-group">
-                            <label for="email">E-mail Institucional ou Comercial</label>
-                            <input type="email" id="email" required placeholder="seuemail@exemplo.com">
+                            <label>E-mail Institucional</label>
+                            <input type="email" required placeholder="seuemail@exemplo.com">
                         </div>
                         <div class="form-group">
-                            <label for="assunto">Assunto / Tipo de Demanda</label>
-                            <select id="assunto" required>
-                                <option value="">Selecione...</option>
-                                <option value="sistema">Proposta de Novo Sistema</option>
-                                <option value="parceria">Parceria / Operação Conjunta</option>
-                                <option value="duvida">Dúvida / Informação</option>
-                            </select>
+                            <label>Mensagem</label>
+                            <textarea rows="4" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);" placeholder="Descreva sua solicitação..."></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="mensagem">Descrição do Problema ou Projeto</label>
-                            <textarea id="mensagem" required placeholder="Descreva detalhes sobre sua necessidade..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitação</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Proposta</button>
                     </form>
                 </div>
 
-                <!-- LOCALIZAÇÃO E CONTATO ATUALIZADOS -->
-                <div style="display: flex; flex-direction: column; justify-content: center;">
-                    <h3>Localização &amp; Atendimento</h3>
+                <div style="display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+                    <h3>Endereço Oficial</h3>
                     <p class="mt-2"><strong>Instituto Federal Fluminense (IFF) - Campus Quissamã</strong></p>
-                    <p>Avenida Amílcar Pereira da Silva 727, bairro Piteiras Quissamã RJ</p>
-
-                    <div class="mt-4">
-                        <p><strong>Laboratório do Projeto:</strong> Sala de Prática Profissional Empreendedora (PPE)</p>
-                        <p><strong>E-mail:</strong> codehub.quissama@iff.edu.br</p>
-                        <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 08h às 17h</p>
-                    </div>
-
-                    <div class="mt-4">
-                        <img src="https://raw.githubusercontent.com/iff-quissama/marcas-iff/main/logo-iff.svg" alt="IFFluminense Logo" style="height: 50px; width: auto;">
-                    </div>
+                    <p style="color: var(--cyan-dark); font-weight: 700;" class="mt-2">📍 Avenida Amílcar Pereira da Silva 727, bairro Piteiras Quissamã RJ</p>
+                    <p class="mt-4"><strong>E-mail do Projeto:</strong> codehub.quissama@iff.edu.br</p>
+                    <p><strong>Laboratório:</strong> Sala de PPE (Prática Profissional Empreendedora)</p>
                 </div>
             </div>
         </div>
@@ -129,8 +87,8 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-bottom" style="margin-top: 0; padding-top: 0; border-top: none;">
-                <p>&copy; 2026 Code Hub - IFFluminense Campus Quissamã. Todos os direitos reservados.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Code Hub - IFFluminense Campus Quissamã.</p>
             </div>
         </div>
     </footer>
