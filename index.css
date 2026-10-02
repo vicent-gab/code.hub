@@ -21,7 +21,7 @@
     --transition: all 0.3s ease;
 }
 
-/* Base and Reset */
+/* Base e Reset */
 * {
     margin: 0;
     padding: 0;
@@ -94,7 +94,7 @@ img {
 .navbar {
     position: sticky;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
@@ -114,46 +114,50 @@ img {
 }
 
 /* ==========================================================================
-   LOGO 3D - ESTILO INSPIRADO NA IMAGEM
+   LOGO CLEAN & DEFINIDA - CODE HUB
    ========================================================================== */
 .logo-3d {
     font-size: 26px;
-    font-weight: 900;
+    font-weight: 800;
     letter-spacing: -0.5px;
     display: inline-flex;
     align-items: center;
     text-transform: none;
     transition: transform 0.3s ease;
-    filter: drop-shadow(0px 4px 6px rgba(224, 86, 36, 0.25));
 }
 
 .logo-3d:hover {
-    transform: translateY(-2px) scale(1.02);
+    transform: translateY(-1px);
 }
 
-/* Laranja vibrant 3D com sombras projetadas */
 .logo-3d .logo-code,
 .logo-3d .logo-slash {
-    background: linear-gradient(135deg, #FF6B35 0%, #E04E1B 100%);
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 
-        1px 1px 0px #C03808,
-        2px 2px 0px #A02B03,
-        3px 3px 2px rgba(0, 0, 0, 0.2);
+    font-weight: 900;
 }
 
 .logo-3d .logo-hub {
-    background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 
-        1px 1px 0px #0D1117,
-        2px 2px 0px #000000,
-        3px 3px 2px rgba(0, 0, 0, 0.15);
+    color: #2D3748;
+    font-weight: 800;
 }
 
-/* DISCRETA LOGO / INSÍGNIA IFF */
+/* LOGO OFICIAL IFF */
+.iff-brand-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-left: 1px solid var(--border-color);
+    padding-left: 16px;
+}
+
+.iff-logo-img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+}
+
 .iff-badge-discrete {
     display: flex;
     align-items: center;
@@ -172,7 +176,7 @@ img {
 .iff-dot {
     width: 6px;
     height: 6px;
-    background-color: #de350b; /* Toque vermelho sutil do IFF */
+    background-color: #de350b;
     border-radius: 50%;
     display: inline-block;
 }
@@ -190,8 +194,10 @@ img {
     transition: var(--transition);
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu a.active {
     color: var(--primary-color);
+    font-weight: 600;
 }
 
 /* Buttons */
@@ -234,9 +240,13 @@ img {
     border-radius: var(--radius-sm);
 }
 
+.btn-nav:hover {
+    background-color: var(--primary-dark);
+}
+
 /* Hero Section */
 .hero {
-    padding: 120px 0 80px 0;
+    padding: 100px 0 80px 0;
     background: linear-gradient(135deg, #f0f9f5 0%, #e6f2ed 100%);
     text-align: center;
 }
@@ -259,7 +269,7 @@ img {
 }
 
 .hero h1 {
-    font-size: 44px;
+    font-size: 42px;
     margin-bottom: 20px;
     letter-spacing: -1px;
 }
@@ -544,9 +554,7 @@ img {
 }
 
 .footer-logo.logo-3d .logo-hub {
-    background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #FFFFFF;
 }
 
 .footer-desc {
@@ -563,6 +571,21 @@ img {
 
 .footer-contact p {
     font-size: 14px;
+}
+
+.footer-iff-brand {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-iff-img {
+    height: 48px;
+    width: auto;
+    background: #ffffff;
+    padding: 4px;
+    border-radius: 4px;
 }
 
 .footer-bottom {
@@ -586,5 +609,6 @@ img {
     .hero h1 { font-size: 28px; }
     .hero p { font-size: 16px; }
     .section { padding: 48px 0; }
-    .brand-wrapper { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .brand-wrapper { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .iff-brand-container { border-left: none; padding-left: 0; }
 }
