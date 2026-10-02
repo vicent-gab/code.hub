@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos | Code Hub</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -14,139 +11,88 @@
     <header class="navbar">
         <div class="container nav-container">
             <div class="brand-wrapper">
-                <a href="index.html" class="brand-logo logo-3d">
+                <a href="index.html" class="logo-3d">
                     <span class="logo-code">&lt;Code</span><span class="logo-hub">Hub</span><span class="logo-slash">/&gt;</span>
                 </a>
                 <div class="iff-brand-container">
-                    <img src="https://raw.githubusercontent.com/iff-quissama/marcas-iff/main/logo-iff.svg" alt="Logo Instituto Federal Fluminense" class="iff-logo-img">
-                    <div class="iff-badge-discrete">
-                        <span class="iff-dot"></span> Quissamã
-                    </div>
+                    <svg class="iff-svg-logo" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="10" width="12" height="12" rx="2" fill="#d32f2f"/>
+                        <rect x="20" y="10" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="5" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="20" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="5" y="40" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="20" y="40" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="35" y="10" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <rect x="35" y="25" width="12" height="12" rx="2" fill="#2e7d32"/>
+                        <text x="58" y="28" fill="#0d1b2a" font-family="Inter" font-weight="800" font-size="14">INSTITUTO</text>
+                        <text x="58" y="42" fill="#00838f" font-family="Inter" font-weight="700" font-size="12">FEDERAL</text>
+                        <text x="58" y="53" fill="#546e7a" font-family="Inter" font-weight="500" font-size="9">Fluminense</text>
+                    </svg>
+                    <div class="iff-badge-discrete"><span class="iff-dot"></span> Quissamã</div>
                 </div>
             </div>
-
             <nav class="nav-menu">
                 <a href="quem-somos.html">Quem Somos</a>
                 <a href="o-projeto.html">O Projeto</a>
                 <a href="projetos.html" class="active">Projetos</a>
                 <a href="operacoes.html">Operações Conjuntas</a>
                 <a href="servicos.html">Serviços</a>
-                <a href="contato.html" class="btn-nav">Contato</a>
+                <a href="contato.html">Contato</a>
+                <a href="login.html" class="btn-nav-login">Área Restrita</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero" style="padding: 60px 0 40px 0;">
+    <!-- HERO COM IMAGEM DE DASHBOARD DE PROJETOS -->
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80');">
         <div class="container hero-content">
-            <span class="badge">Portfólio &amp; Entregas</span>
-            <h1>Nossos Projetos</h1>
-            <p>Conheça os sistemas em andamento, projetos pretendidos e soluções já concluídas pela Code Hub.</p>
+            <span class="badge">Portfólio de Software</span>
+            <h1>Projetos &amp; Entregáveis</h1>
+            <p>Conheça os sistemas web em andamento, projetos pretendidos e soluções concluídas.</p>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            
             <div class="category-title">
-                <span>🚀 Projetos em Andamento</span>
+                <span>🚀 Em Andamento</span>
                 <span class="badge-status status-andamento">Em Execução</span>
             </div>
-            <div class="grid grid-3" style="margin-bottom: 56px;">
+            <div class="grid grid-2">
                 <div class="card-project">
                     <div class="project-img-container">
-                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="Sistema de Gestão">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Painel IFF">
                     </div>
                     <div class="project-body">
-                        <h4>Hub de Agendamento do Campus</h4>
-                        <p>Sistema Web para reserva de laboratórios, auditórios e equipamentos com confirmação por e-mail.</p>
-                        <div>
+                        <h4>Hub de Agendamento de Recursos IFF</h4>
+                        <p>Sistema para reserva e gestão de laboratórios de informática, salas e equipamentos.</p>
+                        <div class="mt-2">
                             <span class="tag">PHP / Laravel</span>
-                            <span class="tag">Tailwind</span>
                             <span class="tag">MySQL</span>
                         </div>
                     </div>
                 </div>
-
                 <div class="card-project">
                     <div class="project-img-container">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Painel Interativo">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="Plataforma de Eventos">
                     </div>
                     <div class="project-body">
-                        <h4>Painel Digital de Avisos IFF</h4>
-                        <p>Dashboard interativo para exibição de eventos acadêmicos, prazos de matrículas e oportunidades de estágio.</p>
-                        <div>
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">API Rest</span>
+                        <h4>Portal de Eventos e Certificados</h4>
+                        <p>Emissão automatizada de certificados para a Semana Acadêmica do campus.</p>
+                        <div class="mt-2">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML5 / CSS3</span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="category-title">
-                <span>💡 Projetos Pretendidos</span>
-                <span class="badge-status status-pretendidos">Planejados</span>
-            </div>
-            <div class="grid grid-3" style="margin-bottom: 56px;">
-                <div class="card-project">
-                    <div class="project-img-container">
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Segurança de dados">
-                    </div>
-                    <div class="project-body">
-                        <h4>App Guia do Estudante IFF</h4>
-                        <p>Aplicativo mobile para consulta de horários de aulas, notas e cardápio do Restaurante Universitário.</p>
-                        <div>
-                            <span class="tag">Flutter</span>
-                            <span class="tag">Firebase</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="category-title">
-                <span>✅ Projetos Concluídos</span>
-                <span class="badge-status status-concluido">Entregues</span>
-            </div>
-            <div class="grid grid-3">
-                <div class="card-project">
-                    <div class="project-img-container">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Portal institucional">
-                    </div>
-                    <div class="project-body">
-                        <h4>Portal de Eventos Acadêmicos</h4>
-                        <p>Plataforma para inscrição e emissão automática de certificados para semanas acadêmicas.</p>
-                        <div>
-                            <span class="tag">HTML5/CSS3</span>
-                            <span class="tag">JS</span>
-                            <span class="tag">PHP</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <div class="grid grid-2">
-                <div>
-                    <a href="index.html" class="brand-logo logo-3d footer-logo">
-                        <span class="logo-code">&lt;Code</span><span class="logo-hub">Hub</span><span class="logo-slash">/&gt;</span>
-                    </a>
-                    <p class="footer-desc">Miniempresa de Tecnologia do IFFluminense Campus Quissamã.</p>
-                    <div class="footer-iff-brand">
-                        <img src="https://raw.githubusercontent.com/iff-quissama/marcas-iff/main/logo-iff.svg" alt="IFFluminense Logo" class="footer-iff-img">
-                    </div>
-                </div>
-                <div class="footer-contact">
-                    <h4>Entre em Contato</h4>
-                    <p>Precisa de um sistema desenvolvido para o seu setor?</p>
-                    <a href="contato.html" class="btn btn-primary mt-2">Página de Contato</a>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Code Hub - IFFluminense Campus Quissamã. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Code Hub - IFFluminense Campus Quissamã.</p>
             </div>
         </div>
     </footer>
