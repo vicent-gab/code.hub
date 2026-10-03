@@ -1,27 +1,23 @@
 /* ==========================================================================
    CODE HUB - ESTILOS GLOBAIS & DESIGN SYSTEM (index.css)
-   Paleta: Ciano Deep & Cream Soft com Efeitos 3D, Gradientes nos Botões e Efeitos Visuais
    ========================================================================== */
 
 :root {
     /* --- CORES PRINCIPAIS (CIANO & CREME) --- */
     --cyan-primary: #00838f;        /* Ciano Elegante Principal */
-    --cyan-dark: #006064;           /* Ciano Escuro para botões e contrastes */
-    --cyan-light: #00e5ff;          /* Ciano Neve/Glow para detalhes 3D e accents */
-    --cyan-soft-bg: #e0f7fa;        /* Fundo Ciano muito suave */
+    --cyan-dark: #006064;           /* Ciano Escuro */
+    --cyan-light: #00e5ff;          /* Ciano Glow */
+    --cyan-soft-bg: #e0f7fa;        /* Fundo Ciano suave */
     
-    --cream-bg: #faf8f5;            /* Creme Principal do Site */
-    --cream-card: #fffdf9;          /* Creme Claro para Cards */
-    --cream-darker: #f3efe6;        /* Creme para divisões e fundos secundários */
+    --green-gradient-hover: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%); /* Verde Gradiente para Hover */
+
+    --cream-bg: #faf8f5;            /* Creme Principal */
+    --cream-card: #fffdf9;          /* Creme para Cards */
+    --cream-darker: #f3efe6;        /* Creme secundário */
     
-    --dark-slate: #0d1b2a;          /* Azul Escuro / Grafite para textos e rodapés */
-    --body-text: #37474f;           /* Cor padrão de leitura */
-    --border-color: #e0dace;        /* Borda em tom creme/suave */
-    
-    /* GRADIENTES PARA BOTÕES DE NAVEGAÇÃO E REDIRECIONAMENTO */
-    --grad-primary: linear-gradient(135deg, #00838f 0%, #00acc1 50%, #006064 100%);
-    --grad-hover: linear-gradient(135deg, #00acc1 0%, #00e5ff 50%, #00838f 100%);
-    --grad-accent: linear-gradient(135deg, #00e5ff 0%, #00838f 100%);
+    --dark-slate: #0d1b2a;          /* Grafite Escuro */
+    --body-text: #37474f;           /* Cor de leitura */
+    --border-color: #e0dace;        
     
     /* --- EFEITOS E DIMENSÕES --- */
     --radius-sm: 8px;
@@ -29,8 +25,6 @@
     --radius-lg: 24px;
     --shadow-soft: 0 10px 30px rgba(0, 96, 100, 0.08);
     --shadow-hover: 0 18px 40px rgba(0, 96, 100, 0.22);
-    --shadow-3d: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
-    --shadow-neon: 0 0 15px rgba(0, 229, 255, 0.5), 0 0 30px rgba(0, 131, 143, 0.3);
     --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -139,7 +133,7 @@ img {
     gap: 20px;
 }
 
-/* --- LOGO 3D TURBINADA DA CODE HUB COM EFETIOS VISUAIS --- */
+/* --- LOGO 3D DA CODE HUB --- */
 .logo-3d-wrapper {
     perspective: 1000px;
 }
@@ -158,7 +152,7 @@ img {
 }
 
 .logo-3d:hover {
-    transform: rotateY(15deg) rotateX(8deg) scale(1.06);
+    transform: rotateY(12deg) rotateX(6deg) scale(1.05);
 }
 
 .logo-code {
@@ -167,7 +161,6 @@ img {
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0px 2px 8px rgba(0, 229, 255, 0.4));
     font-weight: 900;
-    position: relative;
 }
 
 .logo-hub {
@@ -194,7 +187,7 @@ img {
     100% { filter: drop-shadow(0 0 10px rgba(0,229,255,0.8)); }
 }
 
-/* --- MARCA E LOGO VETORIAL DO IFF --- */
+/* --- MARCA DO IFF --- */
 .iff-brand-container {
     display: flex;
     align-items: center;
@@ -233,21 +226,20 @@ img {
     box-shadow: 0 0 6px rgba(211, 47, 47, 0.6);
 }
 
-/* MENU DE NAVEGAÇÃO */
+/* --- MENU DE NAVEGAÇÃO E ESPAÇAMENTOS --- */
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 20px; /* Maior espaçamento entre os botões da nav */
 }
 
 .nav-link {
     font-weight: 600;
     font-size: 14px;
     color: var(--dark-slate);
-    padding: 8px 14px;
+    padding: 8px 16px;
     border-radius: var(--radius-sm);
     transition: var(--transition);
-    position: relative;
 }
 
 .nav-link:hover,
@@ -256,30 +248,13 @@ img {
     background-color: var(--cyan-soft-bg);
 }
 
-/* BOTÃO DE LOGIN / ÁREA RESTRITA COM GRADIENTE */
-.btn-nav-login {
-    background: var(--grad-primary);
-    color: #ffffff !important;
-    padding: 9px 18px !important;
-    border-radius: var(--radius-sm);
-    box-shadow: 0 4px 14px rgba(0, 96, 100, 0.25);
-    background-size: 200% auto;
-    transition: var(--transition);
-}
-
-.btn-nav-login:hover {
-    background-position: right center;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-neon);
-}
-
-/* --- BOTÕES COM FUNDO GRADIENTE E EFEITOS DE TRANSIÇÃO --- */
+/* --- ESTILO DOS BOTÕES (FUNDO CIANO -> HOVER VERDE GRADIENTE) --- */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 12px 24px;
+    padding: 12px 28px; /* Maior espaçamento interno */
     border-radius: var(--radius-sm);
     font-weight: 700;
     font-size: 15px;
@@ -292,30 +267,29 @@ img {
 }
 
 .btn-lg {
-    padding: 15px 32px;
+    padding: 16px 36px;
     font-size: 16px;
 }
 
-/* GRADIENTE PRINCIPAL COM ANIMAÇÃO DE SHIMMER */
-.btn-gradient, .btn-primary {
-    background: linear-gradient(135deg, #00838f 0%, #00acc1 50%, #006064 100%);
-    background-size: 200% auto;
+/* Fundo Ciano Padrão */
+.btn-gradient, 
+.btn-primary, 
+.btn-nav-login {
+    background: var(--cyan-primary) !important;
     color: #ffffff !important;
-    box-shadow: 0 6px 20px rgba(0, 96, 100, 0.25);
+    box-shadow: 0 4px 14px rgba(0, 131, 143, 0.25);
 }
 
-.btn-gradient:hover, .btn-primary:hover {
-    background-position: right center;
+/* Fundo Verde Gradiente ao Passar o Mouse (Hover) */
+.btn-gradient:hover, 
+.btn-primary:hover, 
+.btn-nav-login:hover {
+    background: var(--green-gradient-hover) !important;
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 28px rgba(0, 96, 100, 0.35);
+    box-shadow: 0 10px 24px rgba(46, 125, 50, 0.35);
 }
 
-/* Efeito de iluminação no clique do botão */
-.btn-gradient:active, .btn-primary:active {
-    transform: translateY(-1px);
-}
-
-/* BOTÃO OUTLINE COM GLOW GRADIENTE AO PASSAR O MOUSE */
+/* Botão Outline */
 .btn-outline {
     background-color: rgba(255, 255, 255, 0.9);
     color: var(--dark-slate);
@@ -324,14 +298,14 @@ img {
 }
 
 .btn-outline:hover {
-    background: var(--cream-card);
-    border-color: var(--cyan-primary);
-    color: var(--cyan-dark);
-    box-shadow: 0 8px 20px rgba(0, 131, 143, 0.15);
+    background: var(--green-gradient-hover);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 10px 24px rgba(46, 125, 50, 0.3);
     transform: translateY(-3px);
 }
 
-/* --- HERO SECTION COM IMAGEM E OVERLAY --- */
+/* --- HERO SECTION --- */
 .hero {
     position: relative;
     padding: 120px 0 90px 0;
@@ -389,7 +363,7 @@ img {
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 18px;
+    gap: 28px; /* Maior espaçamento entre botões principais */
     flex-wrap: wrap;
 }
 
@@ -423,7 +397,7 @@ img {
     color: #546e7a;
 }
 
-/* --- CARDS COM RECURSOS VISUAIS & GLASSMORPHISM --- */
+/* --- CARDS COM RECURSOS VISUAIS --- */
 .card-pilar, .card-about, .card-service, .card-operacao, .card-project {
     background-color: var(--cream-card);
     padding: 36px;
@@ -463,7 +437,7 @@ img {
     border-radius: var(--radius-sm);
 }
 
-/* --- RODAPÉ (FOOTER) --- */
+/* --- RODAPÉ (FOOTER) CORRIGIDO --- */
 .footer {
     background-color: var(--dark-slate);
     color: #b0bec5;
@@ -471,8 +445,14 @@ img {
     border-top: 4px solid var(--cyan-primary);
 }
 
+/* Ajuste na logo do rodapé para remover borrão/desfoque */
+.footer-logo {
+    padding: 0;
+}
+
 .footer-logo .logo-hub {
     color: #ffffff;
+    text-shadow: none; /* Remove a sombra duplicada que causava borrão no fundo escuro */
 }
 
 .footer-desc {
