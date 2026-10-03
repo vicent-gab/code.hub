@@ -1,6 +1,6 @@
 /* ==========================================================================
    CODE HUB - ESTILOS GLOBAIS & DESIGN SYSTEM (index.css)
-   Paleta: Ciano Deep & Cream Soft com Efeitos 3D, Glassmorphism e Imagens Hero
+   Paleta: Ciano Deep & Cream Soft com Efeitos 3D, Gradientes nos Botões e Efeitos Visuais
    ========================================================================== */
 
 :root {
@@ -18,13 +18,19 @@
     --body-text: #37474f;           /* Cor padrão de leitura */
     --border-color: #e0dace;        /* Borda em tom creme/suave */
     
+    /* GRADIENTES PARA BOTÕES DE NAVEGAÇÃO E REDIRECIONAMENTO */
+    --grad-primary: linear-gradient(135deg, #00838f 0%, #00acc1 50%, #006064 100%);
+    --grad-hover: linear-gradient(135deg, #00acc1 0%, #00e5ff 50%, #00838f 100%);
+    --grad-accent: linear-gradient(135deg, #00e5ff 0%, #00838f 100%);
+    
     /* --- EFEITOS E DIMENSÕES --- */
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
     --shadow-soft: 0 10px 30px rgba(0, 96, 100, 0.08);
-    --shadow-hover: 0 18px 40px rgba(0, 96, 100, 0.18);
+    --shadow-hover: 0 18px 40px rgba(0, 96, 100, 0.22);
     --shadow-3d: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+    --shadow-neon: 0 0 15px rgba(0, 229, 255, 0.5), 0 0 30px rgba(0, 131, 143, 0.3);
     --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -45,6 +51,22 @@ body {
     background-color: var(--cream-bg);
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+/* --- ANIMAÇÃO DE TRANSIÇÃO ENTRE PÁGINAS --- */
+.page-transition {
+    animation: fadeInSlide 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -97,11 +119,12 @@ img {
 .navbar {
     position: sticky;
     top: 0;
-    background: rgba(250, 248, 245, 0.92);
-    backdrop-filter: blur(12px);
+    background: rgba(250, 248, 245, 0.94);
+    backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
     padding: 14px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .nav-container {
@@ -116,45 +139,59 @@ img {
     gap: 20px;
 }
 
-/* --- LOGO 3D AVANÇADA DA CODE HUB --- */
+/* --- LOGO 3D TURBINADA DA CODE HUB COM EFETIOS VISUAIS --- */
 .logo-3d-wrapper {
     perspective: 1000px;
 }
 
 .logo-3d {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 900;
     display: inline-flex;
     align-items: center;
     letter-spacing: -0.5px;
-    text-transform: none;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 4px 8px;
+    border-radius: 8px;
 }
 
 .logo-3d:hover {
-    transform: rotateY(12deg) rotateX(6deg) scale(1.03);
+    transform: rotateY(15deg) rotateX(8deg) scale(1.06);
 }
 
 .logo-code {
     background: linear-gradient(135deg, #00e5ff 0%, #00838f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 2px 8px rgba(0, 229, 255, 0.4));
     font-weight: 900;
+    position: relative;
 }
 
 .logo-hub {
     color: var(--dark-slate);
-    text-shadow: 1px 1px 0px #fff, 3px 3px 0px rgba(0, 96, 100, 0.2);
+    text-shadow: 2px 2px 0px #ffffff, 4px 4px 0px rgba(0, 96, 100, 0.25);
     font-weight: 900;
     margin: 0 2px;
+    transition: color 0.3s ease;
+}
+
+.logo-3d:hover .logo-hub {
+    color: #00838f;
 }
 
 .logo-slash {
     color: var(--cyan-dark);
     font-weight: 900;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+    animation: pulseGlow 2.5s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 2px rgba(0,229,255,0.3)); }
+    100% { filter: drop-shadow(0 0 10px rgba(0,229,255,0.8)); }
 }
 
 /* --- MARCA E LOGO VETORIAL DO IFF --- */
@@ -190,7 +227,7 @@ img {
 .iff-dot {
     width: 8px;
     height: 8px;
-    background-color: #d32f2f; /* Vermelho característico IFF */
+    background-color: #d32f2f;
     border-radius: 50%;
     display: inline-block;
     box-shadow: 0 0 6px rgba(211, 47, 47, 0.6);
@@ -200,75 +237,101 @@ img {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
 }
 
-.nav-menu a {
+.nav-link {
     font-weight: 600;
     font-size: 14px;
     color: var(--dark-slate);
-    padding: 6px 12px;
+    padding: 8px 14px;
     border-radius: var(--radius-sm);
     transition: var(--transition);
+    position: relative;
 }
 
-.nav-menu a:hover,
-.nav-menu a.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--cyan-primary);
     background-color: var(--cyan-soft-bg);
 }
 
+/* BOTÃO DE LOGIN / ÁREA RESTRITA COM GRADIENTE */
 .btn-nav-login {
-    background: linear-gradient(135deg, var(--cyan-dark) 0%, var(--cyan-primary) 100%);
+    background: var(--grad-primary);
     color: #ffffff !important;
-    box-shadow: 0 4px 12px rgba(0, 96, 100, 0.25);
+    padding: 9px 18px !important;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 14px rgba(0, 96, 100, 0.25);
+    background-size: 200% auto;
+    transition: var(--transition);
 }
 
 .btn-nav-login:hover {
+    background-position: right center;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 96, 100, 0.35);
+    box-shadow: var(--shadow-neon);
 }
 
-/* --- BOTÕES ESTILIZADOS --- */
+/* --- BOTÕES COM FUNDO GRADIENTE E EFEITOS DE TRANSIÇÃO --- */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 14px 28px;
+    gap: 10px;
+    padding: 12px 24px;
     border-radius: var(--radius-sm);
     font-weight: 700;
     font-size: 15px;
     cursor: pointer;
     transition: var(--transition);
     border: none;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.btn-primary {
-    background: linear-gradient(135deg, var(--cyan-primary) 0%, var(--cyan-dark) 100%);
-    color: #ffffff;
-    box-shadow: var(--shadow-3d);
+.btn-lg {
+    padding: 15px 32px;
+    font-size: 16px;
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(0, 96, 100, 0.3);
+/* GRADIENTE PRINCIPAL COM ANIMAÇÃO DE SHIMMER */
+.btn-gradient, .btn-primary {
+    background: linear-gradient(135deg, #00838f 0%, #00acc1 50%, #006064 100%);
+    background-size: 200% auto;
+    color: #ffffff !important;
+    box-shadow: 0 6px 20px rgba(0, 96, 100, 0.25);
 }
 
+.btn-gradient:hover, .btn-primary:hover {
+    background-position: right center;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 96, 100, 0.35);
+}
+
+/* Efeito de iluminação no clique do botão */
+.btn-gradient:active, .btn-primary:active {
+    transform: translateY(-1px);
+}
+
+/* BOTÃO OUTLINE COM GLOW GRADIENTE AO PASSAR O MOUSE */
 .btn-outline {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.9);
     color: var(--dark-slate);
     border: 2px solid var(--border-color);
     backdrop-filter: blur(4px);
 }
 
 .btn-outline:hover {
-    background-color: var(--cream-card);
+    background: var(--cream-card);
     border-color: var(--cyan-primary);
     color: var(--cyan-dark);
+    box-shadow: 0 8px 20px rgba(0, 131, 143, 0.15);
+    transform: translateY(-3px);
 }
 
-/* --- HERO SECTION COM IMAGEM DE FUNDO REVERSÍVEL --- */
+/* --- HERO SECTION COM IMAGEM E OVERLAY --- */
 .hero {
     position: relative;
     padding: 120px 0 90px 0;
@@ -279,7 +342,6 @@ img {
     text-align: center;
 }
 
-/* Máscara/Overlay para garantir legibilidade dos textos sobre a imagem */
 .hero::before {
     content: "";
     position: absolute;
@@ -401,125 +463,6 @@ img {
     border-radius: var(--radius-sm);
 }
 
-/* --- PROJETOS E PORTFÓLIO --- */
-.category-title {
-    font-size: 22px;
-    margin-bottom: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 12px;
-    border-bottom: 2px solid var(--border-color);
-}
-
-.badge-status {
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-.status-andamento { background-color: #e0f7fa; color: #006064; }
-.status-pretendidos { background-color: #fff3e0; color: #e65100; }
-.status-concluido { background-color: #e8f5e9; color: #2e7d32; }
-
-.project-img-container {
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-}
-
-.project-img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.card-project:hover .project-img-container img {
-    transform: scale(1.08);
-}
-
-.project-body {
-    padding: 24px;
-}
-
-.tag {
-    display: inline-block;
-    background-color: var(--cyan-soft-bg);
-    color: var(--cyan-dark);
-    font-size: 12px;
-    padding: 4px 10px;
-    border-radius: 6px;
-    margin-right: 6px;
-    font-weight: 700;
-}
-
-/* --- ORGANOGRAMA DA MINIEMPRESA --- */
-.card-organograma {
-    background-color: var(--cream-card);
-    padding: 36px;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-soft);
-}
-
-.tree-node {
-    padding: 14px;
-    border-radius: var(--radius-sm);
-    text-align: center;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.tree-node.main { background-color: var(--dark-slate); color: #ffffff; }
-.tree-node.coordinator { background-color: var(--cyan-dark); color: #ffffff; }
-.tree-node.team { background-color: var(--cyan-soft-bg); color: var(--cyan-dark); border: 1px solid rgba(0,131,143,0.2); }
-
-/* --- TELA DE LOGIN ESTILIZADA --- */
-.login-wrapper {
-    max-width: 480px;
-    margin: 0 auto;
-    background: var(--cream-card);
-    padding: 40px;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-hover);
-}
-
-.form-group {
-    margin-bottom: 22px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: var(--dark-slate);
-}
-
-.form-group input, .form-group select, .form-group textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-    background-color: #ffffff;
-    font-family: inherit;
-    font-size: 15px;
-    color: var(--dark-slate);
-    transition: var(--transition);
-}
-
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: var(--cyan-primary);
-    box-shadow: 0 0 0 4px rgba(0, 131, 143, 0.15);
-}
-
 /* --- RODAPÉ (FOOTER) --- */
 .footer {
     background-color: var(--dark-slate);
@@ -543,13 +486,6 @@ img {
     color: #ffffff;
     font-size: 20px;
     margin-bottom: 12px;
-}
-
-.footer-iff-brand {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
 }
 
 .footer-bottom {
